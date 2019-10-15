@@ -1,0 +1,1538 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#"
+     xml:base="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288">
+        <rdfs:comment xml:lang="en">Ontology for sweetpacking process</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology also resue some part of the ontology describe in The ROSETTA ontology available in http://kif.cs.lth.se/ontologies/rosetta.owl</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#contain -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#contain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#destination -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#destination">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#box"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detect -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detect">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#detectObject"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#origin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#origin">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#box"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#origin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#pack -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#pack">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#packing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#suitableFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#suitableFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#then -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#then"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#use -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#use"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Coordinate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Coordinate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#QRCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#QRCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#identifier"/>
+        <rdfs:comment xml:lang="en">Quick Response Code</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#blue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#blue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Coordinate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinateX -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinateX">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinateY -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinateY">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinateZ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinateZ">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#cartesianCoordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ceramics -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ceramics">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#box"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#currency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#currency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#depth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#depth">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dimension"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dimension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dimension">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#physicalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dust -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dust">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#environmentCondition"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#endTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#endTime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#environmentCondition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#environmentCondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#packing"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Coordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinateX -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinateX">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinateY -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinateY">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinateZ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinateZ">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eulerCoordinate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#glass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#glass">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#goldenColour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#goldenColour">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#green -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#green">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#humidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#humidity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#environmentCondition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#identifier"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ivory -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ivory">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#large -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#large">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#size"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#length -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#length">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dimension"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#mahroon -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#mahroon">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#medium -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#medium">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#size"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#metal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#metal">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#orange -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#orange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#paper -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#paper">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#pink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#pink">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#plastic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#plastic">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#purple -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#purple">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#red -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#red">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#round -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#round">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#shap"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sealing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sealing">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#environmentCondition"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#shap -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#shap">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#silver -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#silver">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#size">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#small -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#small">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#size"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#startTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#startTime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#temperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#temperature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#white -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#white">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#width -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#width">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dimension"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#wood -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#wood">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#material"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#yellow -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#yellow">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#colour"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#acquireImage -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#acquireImage">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#opticFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#arrange -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#arrange">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#check -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#check">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#sensorFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#checkPosition -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#checkPosition">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#check"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#checkPresence -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#checkPresence">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#check"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#computationSkill -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#computationSkill">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#processing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#convey -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#convey">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#transfer"/>
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#count -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#count">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#check"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#detectColor -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#detectColor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#detectObject -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#detectObject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#focalize -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#focalize">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#opticFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#grasp -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#grasp">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#handlingFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#handlingFunction -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#handlingFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#measure -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#measure">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#sensorFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#measureDiameter -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#measureDiameter">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#measureOrientationOfObject -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#measureOrientationOfObject">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#measurePositionOfObject -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#measurePositionOfObject">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#move -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#move">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#opticFunction -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#opticFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#orient -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#orient">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#pass -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#pass">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#position -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#position">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#processImages -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#processImages">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#processing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#processing -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#processing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#read -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#read">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#sensorFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#readBarCode -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#readBarCode">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#read"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#readOpticalCharacters -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#readOpticalCharacters">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#read"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#release -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#release">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#handlingFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#rotate -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#rotate">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#scan -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#scan">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#sensorFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://kif.cs.lth.se/ontologies/rosetta.owl#sensorFunction -->
+
+    <owl:Class rdf:about="http://kif.cs.lth.se/ontologies/rosetta.owl#sensorFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Id_ulAdha -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Id_ulAdha">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Id_ulFitr -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#Id_ulFitr">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#KajuKatli -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#KajuKatli">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#event"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#adjustFinger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#adjustFinger">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#grasp"/>
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#release"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#aperitif -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#aperitif">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#beverage"/>
+        <rdfs:comment xml:lang="en">alcoholic beverage taken before a meal as an appetizer</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#artifact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#artifact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#physicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#basket -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#basket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#beverage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#beverage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+        <rdfs:comment xml:lang="en">any liquid suitable for drinking</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#birthdayParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#birthdayParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#box -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#box">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#contain"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#burfi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#burfi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:comment xml:lang="en">An Indian sweet made from milk solids and sugar and typically flavoured with cardamom or nuts</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/burfi</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#can -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#can">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#canning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#canning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#packing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#chocolate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#chocolate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#christmas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#christmas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#destination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#destination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#detection">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#sensorFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#then"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#artifact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dinnerParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dinnerParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#diwali -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#diwali">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <rdfs:comment xml:lang="en">A Hindu festival with lights, held in the period October to November.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/diwali</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dussehra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dussehra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <rdfs:comment xml:lang="en">The tenth and final day of the Hindu festival of Navaratri, usually in October</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/dussehra</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#easter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#easter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#saviyaan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Muslim festival, in particular Eid al-Fitr or Eid al-Adha.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/eid</rdfs:isDefinedBy>
+        <rdfs:seeAlso xml:lang="en">Id</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#farewellParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#farewellParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#physicalEntity"/>
+        <rdfs:comment xml:lang="en">any substance that can be metabolized by an animal to give energy and build tissue</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#action"/>
+        <rdfs:comment xml:lang="en">the actions and activities assigned to or required or expected of a person or group</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ganeshChaturthi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ganeshChaturthi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#graduationParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#graduationParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#beverage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#gulabJamun -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#gulabJamun">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#dussehra"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#halwa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#halwa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#holi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#holi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <rdfs:comment xml:lang="en">A Hindu spring festival celebrated in February or March in honour of Krishna</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/holi</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#injectionMoldedTray -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#injectionMoldedTray">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#tray"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#jalebi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#jalebi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:comment xml:lang="en">An Indian sweet made of a coil of batter fried and steeped in syrup.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/jalebi</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ladoo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#ladoo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:comment xml:lang="en">An Indian sweet made from a mixture of flour, sugar, and shortening, which is shaped into a ball.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/laddu</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#physicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#measureWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#measureWeight">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#namkeen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#namkeen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#teaParty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#navaratri -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#navaratri">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Hindu autumn festival extending over the nine nights before Dussehra.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/navaratri</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#notify -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#notify">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#origin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#origin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#packing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#packing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#function"/>
+        <rdfs:comment xml:lang="en">the enclosure of something in a package or box</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#peda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#peda">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#physicalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#physicalEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#place">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#then"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#packing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rakshaBandhan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rakshaBandhan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">a popular annual festival, usually in August, during which a girl or woman gives a cotton bracelet (rakhi) to a brother or someone she considers as one, who in turn treats her as a sister.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rasgulla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rasgulla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:comment xml:lang="en">An Indian sweet consisting of a ball of paneer (curd cheese) cooked in syrup.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/rasgulla</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rasmalai -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rasmalai">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rathYatra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#rathYatra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#festival"/>
+        <rdfs:comment xml:lang="en">A ceremonial procession centred around a chariot carrying a holy image, specifically the procession of Jagannatha.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/rath_yatra</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#reception -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#reception">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#use"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#box"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#goldenColour"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#robotArm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#robotArm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sandesh -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sandesh">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:comment xml:lang="en">an Indian sweet made from paneer and sugar and cut into squares</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.oxforddictionaries.com/definition/sandesh</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#saviyaan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#saviyaan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#eid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The hard grains left after the milling of flour, used in puddings and in pasta.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#scanQRcode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#scanQRcode">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#scan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#device"/>
+        <rdfs:comment xml:lang="en">any device that receives a signal or stimulus (as heat or pressure or light or motion etc.) and responds to it in a distinctive manner</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensorA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensorA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensorB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensorB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensorC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensorC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#tea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#tea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#beverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#teaParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#teaParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#namkeen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#teleCamera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#teleCamera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#thermoformedTray -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#thermoformedTray">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#packing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#transfer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#transfer">
+        <rdfs:subClassOf rdf:resource="http://kif.cs.lth.se/ontologies/rosetta.owl#move"/>
+        <rdfs:comment xml:lang="en">the act of moving something from one location to another</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#tray -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#tray">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#container"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#truffle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#truffle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+        <rdfs:comment xml:lang="en">creamy chocolate candy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#welcomeParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#welcomeParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#party"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#bring"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#beverage"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#sweet"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#wine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#wine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/subhashis/ontologies/2016/10/untitled-ontology-288#beverage"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+
